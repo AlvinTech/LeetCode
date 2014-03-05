@@ -22,4 +22,5 @@ public class Best_Time_to_Buy_and_Sell_Stock_II {
 }
 
 /**思路：只要明天的股票会涨，我今天就买进，明天就卖出。
+ * 哦 好吧
  * */
