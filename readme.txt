@@ -1,4 +1,4 @@
-现在src 中整 c（src/cpp） 和java(src/v2) 2个版本的leedcod解题思路 ；
+现在src 中整和 c（src/cpp）、 java(src/v2) 2个版本的leedcod解题思路 ；
 其中
 cpp版本由ashqal 贡献并维护：联系Email：547946993@qq.com
 java 版本又alvin 贡献及维护；联系Email：356485194@qq.com
