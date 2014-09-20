@@ -1,3 +1,5 @@
+package com.alvin.java;
+
 /*贪心算法：如果明天的股价比今天高，我就今天买明天卖;
 但是该题先定只能买卖一次，所以你需要遍历找出差值最大的买卖价格。
 Best Time to Buy and Sell Stock 

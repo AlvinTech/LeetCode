@@ -1,4 +1,4 @@
-/** Clone Graph
+package com.alvin.java; /** Clone Graph
 Clone an undirected graph. Each node in the graph contains a label and a list of its neighbors.
 
 
@@ -22,16 +22,18 @@ Visually, the graph looks like the following:
          / \
          \_/
 */
+
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 class UndirectedGraphNode {
     int label;
     List<UndirectedGraphNode> neighbors;
     UndirectedGraphNode(int x) { label = x; neighbors = new ArrayList<UndirectedGraphNode>(); }
 };
+
 public class Clone_Graph {
     Map<Integer,UndirectedGraphNode> map  = new HashMap<Integer,UndirectedGraphNode>();
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
@@ -41,9 +43,9 @@ public class Clone_Graph {
         if(!map.containsKey(node.label)){
             newNode = new UndirectedGraphNode(node.label);
             map.put(node.label,newNode );
-
         }else
             newNode = map.get(node.label);
+
         List<UndirectedGraphNode> newList = newNode.neighbors;
         List<UndirectedGraphNode> list = node.neighbors;
         for(int i =0;i< list.size();i++){
@@ -53,7 +55,7 @@ public class Clone_Graph {
             else if(list.get(i).label != node.label )
                 newList.add(cloneGraph(list.get(i)));
             else
-                newList.add(newNode);
+                newList.add(newNode); //  list.get(i).label == node.label  connect itself;
         }
         return newNode;
 

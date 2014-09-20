@@ -1,3 +1,4 @@
+
 /**
  * 2014-6-10
  * @author Alvin
@@ -8,6 +9,7 @@ a = "11"
 b = "1"
 Return "100".
  */
+package com.alvin.java;
 
 public class Add_Binary {
 

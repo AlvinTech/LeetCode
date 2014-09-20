@@ -1,4 +1,4 @@
-/*
+package com.alvin.java;/*
 Binary Tree Zigzag Level Order Traversal 
 My Submissions
 Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).
@@ -17,8 +17,10 @@ return its zigzag level order traversal as:
   [15,7]
 ]
 */
-import java.util.List;
+
 import java.util.ArrayList;
+import java.util.List;
+
 public class Binary_Tree_Zigzag_Level_Order_Traversal {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();

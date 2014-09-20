@@ -1,4 +1,4 @@
-/*
+package com.alvin.java;/*
 Combination_Sum
 Given a set of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
 
@@ -16,31 +16,29 @@ A solution set is:
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 public class Combination_Sum {
-
+    List<List<Integer>> result = new ArrayList<List<Integer>>();
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> list = new ArrayList<List<Integer>>();
-        List<Integer> li = new ArrayList<Integer>();
-        combination(list,li,candidates,target);
-        return list;
-
+        List<Integer> list = new ArrayList<Integer>();
+        Arrays.sort(candidates);
+        combination(list, candidates, 0, target);
+        return result;
     }
 
-    public void combination(List<List<Integer>> list ,List<Integer> li,int[] candidates,int target ){
+    public void combination(List<Integer> list,int[] candidates,int index, int target ){
         if(target <= 0){
-            if(target == 0 && !list.contains(li)){
-                list.add(li);
+            if(target == 0){
+                result.add(new ArrayList<Integer>(list));
             }
             return;
         }
-        for(int i =0; i < candidates.length;i++){
-            List<Integer> liNew = new ArrayList<Integer>(li);
-            int index =0;
-            while(index < liNew.size() &&candidates[i] > liNew.get(index)){
-                index++;
-            }
-            liNew.add(index,candidates[i]);
-            combination(list,liNew,candidates,target-candidates[i]);
+        for(int i =index; i < candidates.length;i++){
+            if(i > 1 && candidates[i] == candidates[i-1])
+                continue;
+            list.add(candidates[i]);
+            combination(list,candidates,i,target-candidates[i]);
+            list.remove(list.size()-1);
         }
     }
     public static void main(String[] args) {

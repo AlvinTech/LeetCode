@@ -1,5 +1,7 @@
+package com.alvin.java;
+
 /*
-com.alvin.java.Candy
+Candy
 There are N children standing in a line. Each child is assigned a rating value.
 
 You are giving candies to these children subjected to the following requirements:
@@ -8,7 +10,6 @@ Each child must have at least one candy.
 Children with a higher rating get more candies than their neighbors.
 What is the minimum candies you must give?
 */
-package com.alvin.java;
 public class Candy{
     public int candy(int[] ratings) {
         int[] candy = new int[ratings.length];
@@ -31,5 +32,4 @@ public class Candy{
         int[] ratings ={1,4,1,1,2,4,3,1,1};
         System.out.println(new Candy().candy(ratings));
     }
-
 }

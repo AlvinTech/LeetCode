@@ -1,4 +1,4 @@
-/*
+package com.alvin.java;/*
 Anagrams
 Given an array of strings, return all groups of strings that are anagrams.
 
@@ -6,11 +6,9 @@ Note: All inputs will be in lower-case.
 
 注意：不要使用 Map<char[],List<String>> map; char[] 会保存地址 而不是字符串内容。
 */
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
+
+import java.util.*;
+
 public class Anagrams{
     public List<String> anagrams(String[] strs) {
         List<String> result = new ArrayList<String>();

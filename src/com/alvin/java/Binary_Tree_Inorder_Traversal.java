@@ -1,4 +1,4 @@
-/** Binary Tree Inorder Traversal
+package com.alvin.java; /** Binary Tree Inorder Traversal
  Given a binary tree, return the inorder traversal of its nodes' values.
 
  For example:
@@ -16,6 +16,7 @@
  */
 import java.util.List;
 import java.util.Vector;
+
 public class Binary_Tree_Inorder_Traversal {
 
     public List<Integer> inorderTraversal(TreeNode root) {

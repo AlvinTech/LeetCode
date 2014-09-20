@@ -1,4 +1,4 @@
-/** Binary Tree Level Order Traversal
+package com.alvin.java; /** Binary Tree Level Order Traversal
  Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
 
  For example:
@@ -18,9 +18,11 @@
  解题思路 广度优先收索
 Binary Tree Level Order Traversal 二叉树的层遍历
 */
+
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Arrays;
+import java.util.List;
+
 //class TreeNode{
 //    int val;
 //    TreeNode left;
