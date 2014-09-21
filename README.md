@@ -1,4 +1,4 @@
-现在src 中整和 c（src/cpp）、 java(src/com.alvin.java) 2个版本的leedcode解题思路 ；
+现在src 中整和 c（src/cpp）、 java(src/com.alvin.java) 2个版本的leetcode解题思路 ；
 
 其中
 cpp版本由ashqal 贡献并维护：联系Email：547946993@qq.com
