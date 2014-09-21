@@ -4,20 +4,11 @@ Given preorder and inorder traversal of a tree, construct the binary tree.
 Note:
 You may assume that duplicates do not exist in the tree.
 */
+package com.alvin.java;
 import java.util.Arrays;
-//class TreeNode{
-//    int val ;
-//    TreeNode left;
-//    TreeNode right;
-//    TreeNode(int x ){val = x;}
-//}
+
 public class Construct_Binary_Tree_from_Preorder_and_InorderI_Traversal{
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        if(preorder.length == 0 )
-            return null;
-        return build(preorder,inorder);
-    }
-    public TreeNode build(int[] preorder, int[] inorder) {
         if(preorder.length == 0)
             return null;
 
@@ -25,20 +16,20 @@ public class Construct_Binary_Tree_from_Preorder_and_InorderI_Traversal{
         TreeNode node = new TreeNode(preorder[0]);
         //have left subTree
         if(pos >0){
-            node.left  = build(Arrays.copyOfRange(preorder,1,pos+1),
+            node.left  = buildTree(Arrays.copyOfRange(preorder,1,pos+1),
                     Arrays.copyOfRange(inorder,0,pos));
         }else
             node.left = null;
         // hava right subTree
         if(pos < preorder.length){
-            node.right = build(Arrays.copyOfRange(preorder,pos+1,preorder.length),
+            node.right = buildTree(Arrays.copyOfRange(preorder,pos+1,preorder.length),
                     Arrays.copyOfRange(inorder,pos+1,inorder.length));
         }else
             node.right = null;
 
         return node;
-
     }
+
     public int  indexOf(int[]  array, int x){
         for (int i =0 ; i < array.length ;i++ ) {
             if(array[i] == x)

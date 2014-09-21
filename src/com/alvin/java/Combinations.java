@@ -1,4 +1,4 @@
-/**  Combinations
+ /**  Combinations
  * 2014-4-28
  * @author Alvin
  *
@@ -16,7 +16,8 @@ If n = 4 and k = 2, a solution is:
 [1,4],
 ]
  */
-import java.util.*;
+ package com.alvin.java;
+import java.util.ArrayList;
 
 public class Combinations {
     public ArrayList<ArrayList<Integer>> combine(int n, int k) {

@@ -13,7 +13,9 @@ A solution set is:
 [1, 7] 
 [1, 2, 5] 
 [2, 6] 
-[1, 1, 6] 
+[1, 1, 6]
+
+
 */
 
 import java.util.ArrayList;

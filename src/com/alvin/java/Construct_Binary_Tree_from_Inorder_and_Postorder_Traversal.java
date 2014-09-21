@@ -1,12 +1,13 @@
-/*
+/**
 Construct Binary Tree from Inorder and Postorder Traversal 
 Given inorder and postorder traversal of a tree, construct the binary tree.
 
 Note:
 You may assume that duplicates do not exist in the tree.
 */
-
+package com.alvin.java;
 import java.util.Arrays;
+
 public class Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         int length = inorder.length;
