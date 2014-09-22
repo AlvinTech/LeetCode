@@ -1,4 +1,4 @@
-/* 解题思路  DP
+/** 解题思路  DP
 Distinct Subsequences 
 Given a string S and a string T, count the number of distinct subsequences of T in S.
 
@@ -9,7 +9,8 @@ S = "rabbbit", T = "rabbit"
 
 Return 3.
 */
-class Distinct_Subsequences{
+package com.alvin.java;
+class Distinct_Subsequences {
     public int numDistinct(String S, String T) {
         int m = S.length();
         int n = T.length();
@@ -24,7 +25,6 @@ class Distinct_Subsequences{
 				S[0..i-1] 转化到 T[j-1]的数量 + S[0..i-1]转化到T[0..j]的数量；
 				不相等：只能通过S[0...i-1]转化到T[0..j]的数量
 				*/
-
                 array[i][j] = array[i-1][j] + (T.charAt(j-1) == S.charAt(i-1)? array[i-1][j-1] :0);
             }
 

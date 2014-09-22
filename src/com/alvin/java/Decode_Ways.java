@@ -1,4 +1,4 @@
-/*Decode Ways 
+/**Decode Ways
 A message containing letters from A-Z is being encoded to numbers using the following mapping:
 
 'A' -> 1
@@ -12,7 +12,8 @@ Given encoded message "12", it could be decoded as "AB" (1 2) or "L" (12).
 
 The number of ways decoding "12" is 2.
 */
-public class Decode_Ways{
+package com.alvin.java;
+public class Decode_Ways {
     public int numDecodings(String s) {
         int m = s.length();
         if(m == 0)
@@ -35,9 +36,7 @@ public class Decode_Ways{
                 sum[i] = sum[i-1]+ sum[i-2];
             }else if(val < 10 || val > 26)
                 sum[i] =  sum[i-1];
-
         }
-
         return sum[m];
     }
     public static void main(String[] args) {

@@ -17,10 +17,12 @@ For example, [0,2,3,1] is also a valid gray code sequence according to the above
 
 For now, the judge is able to judge based on one instance of gray code sequence. Sorry about that.
 */
-import java.util.Arrays;
+package com.alvin.java;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-public class Gray_Code{
+
+public class Gray_Code {
     public List<Integer> grayCode(int n) {
         List<Integer> list = new ArrayList<Integer>();
         list.add(0);

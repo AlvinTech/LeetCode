@@ -1,4 +1,4 @@
-/*
+package com.alvin.java;/*
 Insert Interval 
 Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
 
@@ -12,8 +12,10 @@ Given [1,2],[3,5],[6,7],[8,10],[12,16], insert and merge [4,9] in as [1,2],[3,10
 
 This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
 */
-import java.util.List;
+
 import java.util.ArrayList;
+import java.util.List;
+
 class Interval{
     int start;
     int end;
@@ -21,6 +23,7 @@ class Interval{
     Interval(int s, int e){this.start = s; this.end = e;}
     public String toString(){return "start: "+ start+" end: "+end+"\n";}
 }
+
 public class Insert_Interval {
 
     public List<Interval> insert(List<Interval> intervals,Interval newInterval){

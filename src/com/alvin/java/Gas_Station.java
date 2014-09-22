@@ -8,11 +8,11 @@
  Note:
  The solution is guaranteed to be unique.
  *
- */
-/**
+
  * 思路：开始下一段路之前，储量必须大于下一段路的开销
 
  */
+package com.alvin.java;
 public class Gas_Station {
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int[] dif = new int[gas.length +1];
@@ -31,7 +31,6 @@ public class Gas_Station {
                 for(int j =0;j< length ;j++){
                     tank+= dif[(j+i)% length];
                     if(tank < 0){
-                        // imprtent
                         i=(i+j)%length;
                         break;
                     }

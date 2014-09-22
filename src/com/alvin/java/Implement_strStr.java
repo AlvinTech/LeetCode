@@ -21,8 +21,9 @@ Returns a pointer to the first occurrence of needle in haystack, or null if need
 
  next    -1   0   0    1   2
 */
-import java.util.Arrays;
-public class Implement_strStr{
+
+package com.alvin.java;
+public class Implement_strStr {
     public int[] getNext(char[] t){
         int[] next = new int[t.length];
         next[0] = -1;

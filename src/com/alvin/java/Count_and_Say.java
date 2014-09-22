@@ -11,7 +11,7 @@ Given an integer n, generate the nth sequence.
 
 Note: The sequence of integers will be represented as a string.
  */
-
+package com.alvin.java;
 public class Count_and_Say {
 
     public String countAndSay(int n) {
@@ -19,19 +19,16 @@ public class Count_and_Say {
         String end ="";
         for(int i=0;i< n-1;i++){
             end = say(sta);
-
             sta = end;
         }
-
         return sta;
     }
 
     public String say(String str){
-        //	System.out.println(str);
         String result = "";
         int count =1;
         for(int i=0;i< str.length();i++){
-            if(i==str.length() -1){
+            if(i==str.length() -1){//因为最后一个没有被计入，需要单独处理
                 result += count + str.substring(i,i+1);
                 count =  1;
             }
@@ -42,11 +39,10 @@ public class Count_and_Say {
                 count =  1;
             }
         }
-        System.out.println(result);
         return result;
     }
     public static void main(String[] args) {
-        new Count_and_Say().countAndSay(1);
+        new Count_and_Say().countAndSay(3);
     }
 
 }

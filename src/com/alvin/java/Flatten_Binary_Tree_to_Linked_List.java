@@ -1,4 +1,4 @@
-/*
+/**
 Flatten Binary Tree to Linked List 
 Given a binary tree, flatten it to a linked list in-place.
 
@@ -23,15 +23,17 @@ The flattened tree should look like:
             \
              6
 */
+package com.alvin.java;
 import java.util.ArrayList;
 import java.util.List;
+
 //class TreeNode{
 //    int val;
 //    TreeNode left;
 //    TreeNode right;
 //    TreeNode(int x){val = x;}
 //}
-public class Flatten_Binary_Tree_to_Linked_List{
+public class Flatten_Binary_Tree_to_Linked_List {
 
     public void flatten(TreeNode root) {
         if(root == null)

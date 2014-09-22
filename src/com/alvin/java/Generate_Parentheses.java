@@ -1,4 +1,4 @@
-/**
+ /**
  * 2014-5-19
  * @author Alvin
 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
@@ -9,7 +9,8 @@ For example, given n = 3, a solution set is:
  * 括号匹配问题：
  *若 第一个（ 对应为止k上的 ） 则：k之前 有i对括号，k之后有n-1-i对括号
  */
-import java.util.*;
+ package com.alvin.java;
+import java.util.ArrayList;
 
 public class Generate_Parentheses {
     public ArrayList<String> generateParenthesis(int n) {
