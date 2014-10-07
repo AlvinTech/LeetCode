@@ -14,33 +14,33 @@ import java.util.List;
 
 public class Permutations {
     List<List<Integer>>   result = new ArrayList<List<Integer>>();
-    List<Integer> list = new ArrayList<Integer>();
+    List<Integer> list = new ArrayList<Integer>();    // save the answer
+    boolean[] flag ;                                      // the numbers is used ;
+    int length ;
     public List<List<Integer>> permute(int[] num) {
-        int[] flag = new int[num.length];
-        DFS(list,num,flag,num.length);
-        return result;
+        length = num.length;
+        if(length == 0) return result;
+        flag = new boolean[length];      //init flag
+        DFS(num);        // dfs deep first research
+        return result;                   // return
     }
-    public void DFS(List<Integer> list,int[] num,int[] flag,int index){
-        if(index ==0){
+    public void DFS(int[] num){   //index is  how many numbers do not add the list
+        if(list.size() ==  length){
             result.add(new ArrayList<Integer>(list));
             return;
         }
-
-        int k =0;
-        for(int i=0; i< index;i++){
-            while(flag[k % num.length] != 0){
-                k ++;
-            }
-            List <Integer> listNew = new ArrayList<Integer>(li);
-            listNew.add(num[k]);
-            int[] flagNew = Arrays.copyOf(flag, flag.length);
-            flagNew[k % num.length] = 1;
-            DFS(list,listNew,num,flagNew,index-1);
-            k++;
+        for(int i=0; i< length ;i++){
+            if(flag[i])
+                continue;
+            list.add(num[i]);
+            flag[i] = true;
+            DFS(num);
+            list.remove(list.size() -1);     // rall back
+            flag[i] = false;
         }
     }
     public static void main(String[] args) {
-        int[] num = {1,1,2};
+        int[] num = {1};
         List<List<Integer>>   list = new Permutations().permute(num);
         for(int i =0 ;i< list.size();i++){
             System.out.println(Arrays.toString(list.get(i).toArray()));
